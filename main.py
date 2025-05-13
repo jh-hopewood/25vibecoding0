@@ -27,6 +27,8 @@ st.write("### 당신의 MBTI를 선택하면 적절한 직업을 추천해드립
 mbti = st.selectbox("🔍 MBTI를 선택하세요:", options=list(MBTI_JOBS.keys()))
 
 if mbti:
-    recommended_job = random.choice(MBTI_JOBS[mbti])
-    st.write(f"### 당신에게 어울리는 직업은... 🥁🎉 **{recommended_job}**!")
+    recommended_jobs = random.sample(MBTI_JOBS[mbti], k=min(3, len(MBTI_JOBS[mbti])))
+    st.write("### 당신에게 어울리는 직업들... 🥁🎉")
+    for job in recommended_jobs:
+        st.write(f"- **{job}**")
     st.balloons()
