@@ -23,7 +23,7 @@ type_descriptions = {
 # MBTI 유형별 학습 팁 정의
 learning_tips = {
     "INTJ": [
-        ("📅 목표는 크게, 계획은 꼼꼼하게", 
+        ("# 목표는 크게, 계획은 꼼꼼하게", 
          "단기적으로는 시험 성적, 장기적으로는 진로 목표를 설정하세요.  \n"
          "예시: 중간고사나 기말고사처럼 단기 목표를 설정할 때는 '수학 1등급'처럼 구체적인 목표를 세우고, 이를 위해 주간 학습 계획을 작성하세요.  \n"
          "실천: 이번 학기 내내 매주 월요일에는 주요 수학 개념 복습, 수요일에는 기출문제 풀이, 금요일에는 오답 정리와 약점 보강 같은 구체적인 계획을 세워보세요."),
@@ -261,7 +261,7 @@ st.write(description)
 
 st.header(f"{selected_mbti} 유형을 위한 학습 팁")
 for title, detail in learning_tips_list:
-    with st.expander(f"#**{title}**"):
+    with st.expander(f"**{title}**"):
         st.markdown(detail)
 
 st.header(f"{selected_mbti} 유형의 학습 시 주의할 점")
