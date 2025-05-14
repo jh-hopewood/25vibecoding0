@@ -65,5 +65,5 @@ for title, detail in learning_tips_list:
 
 st.header(f"{selected_mbti} 유형의 학습 시 주의할 점")
 for caution in learning_cautions_list:
-    with st.expander(caution.split(" - ")[0]):
-        st.write(caution.split(" - ")[1])
+    with st.expander(caution.split(title):
+        st.write(caution.split(detail)
