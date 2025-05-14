@@ -102,17 +102,11 @@ selected_mbti = st.selectbox("자신의 MBTI 유형을 선택하세요:", list(t
 # 선택한 MBTI 설명, 학습 팁, 주의할 점 출력
 description = type_descriptions[selected_mbti]
 learning_tips_list = learning_tips.get(selected_mbti, [])
-learning_cautions_list = learning_cautions.get(selected_mbti, [])
 
 st.header(f"{selected_mbti} 유형의 특성")
 st.write(description)
 
 st.header(f"{selected_mbti} 유형을 위한 학습 팁")
 for title, detail in learning_tips_list:
-    with st.expander(title):
-        st.write(detail)
-
-st.header(f"{selected_mbti} 유형의 학습 시 주의할 점")
-for title, detail in learning_cautions_list:
     with st.expander(title):
         st.write(detail)
