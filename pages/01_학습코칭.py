@@ -254,7 +254,7 @@ learning_cautions = {
 }
 
 # 앱 제목 설정
-st.title("MBTI 학습 코치")
+st.title("MBTI 학습 코칭")
 st.write("자신의 MBTI를 선택하면 학습 스타일에 맞는 팁과 주의할 점을 알려드립니다.")
 
 # MBTI 선택 드롭다운
@@ -271,7 +271,7 @@ st.write(description)
 st.header(f"{selected_mbti} 유형을 위한 학습 팁")
 for title, detail in learning_tips_list:
     with st.expander(f"**{title}**"):
-        st.markdown(detail)
+        st.markdown(detail, unsafe_allow_html=True)
 
 st.header(f"{selected_mbti} 유형의 학습 시 주의할 점")
 for title, detail in learning_cautions_list:
