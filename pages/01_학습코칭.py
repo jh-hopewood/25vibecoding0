@@ -262,7 +262,7 @@ st.write(description)
 st.header(f"{selected_mbti} 유형을 위한 학습 팁")
 for title, detail in learning_tips_list:
     with st.expander(f"**{title}**"):
-        st.write(detail)
+        st.markdown(detail)
 
 st.header(f"{selected_mbti} 유형의 학습 시 주의할 점")
 for title, detail in learning_cautions_list:
